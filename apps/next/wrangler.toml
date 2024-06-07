@@ -1,0 +1,14 @@
+name = "ffrox"
+compatibility_date = "2023-10-30"
+send_metrics = false
+node_compat = true
+route = "app.ffrox.com/*"
+workers_dev = false
+
+[env.preview]
+name = "prev_ffrox"
+workers_dev = true
+
+[env.production]
+name = "prod_ffrox"
+workers_dev = false

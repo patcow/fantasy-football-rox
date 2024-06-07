@@ -1,0 +1,31 @@
+name = "ffrox-api"
+compatibility_date = "2023-10-30"
+send_metrics = false
+node_compat = true
+main = "src/worker.ts"
+account_id = "c6677a35bef08de869530aba24ac6e54"
+
+[[d1_databases]]
+binding = "preview" # i.e. available in your Worker on env.preview_db
+database_name = "prev_ffrox"
+database_id = "eee65512-c106-4eab-bdab-76b633ede874"
+migrations_dir = "migrations"
+
+[[d1_databases]]
+binding = "production" # i.e. available in your Worker on env.DB
+database_name = "prod_ffrox"
+database_id = "e91e98ec-fac8-4e9b-beba-722e0d461f5a"
+migrations_dir = "migrations"
+
+# The necessary secrets are:
+# - APP_URL - for preventing CORS errors
+# - JWT_VERIFICATION_KEY - for Supabase @link https://supabase.com
+#
+# For local development, you can create a file called .dev.vars and use dotenv syntax.
+#
+# For deployed environments, you can use wrangler secrets to set these values.
+# For example:
+# Run `echo <VALUE> | wrangler secret put <NAME>` for each of these
+# Or use the Cloudflare web interface.
+# @link https://developers.cloudflare.com/workers/platform/environment-variables/#environment-variables-via-the-dashboard
+#

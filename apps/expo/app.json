@@ -1,0 +1,41 @@
+{
+  "expo": {
+    "name": "Fantasy Football Rox",
+    "slug": "fantasy-football-rox",
+    "scheme": "ffrox",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "automatic",
+    "splash": {
+      "image": "./assets/splash.png",
+      "backgroundColor": "#ffffff"
+    },
+    "updates": {
+      "enabled": false
+    },
+    "assetBundlePatterns": ["**/*"],
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.ffrox.app"
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#FFFFFF"
+      },
+      "package": "com.ffrox.app"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "825fbd1d-3b9c-4d8c-9845-502a6820c0b8"
+      }
+    },
+    "owner": "patcow",
+    "plugins": ["expo-router"],
+    "experiments": {
+      "tsconfigPaths": true,
+      "typedRoutes": true
+    }
+  }
+}
